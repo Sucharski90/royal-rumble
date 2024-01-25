@@ -4,17 +4,30 @@ const LargeObjectContext = createContext();
 
 const LargeObjectProvider = ({ children }) => {
   const largeObject = {
-    user: {
-        id: 1,
-        username: 'exampleUser',
-        email: 'example@example.com',
-        // ... other user details
-      },
-      settings: {
-        theme: 'light',
-        language: 'en',
-        // ... other settings
-      },
+    rumble_1988: [
+        {
+          id: 1,
+          name: 'exampleUser1',
+          time: 'user1@example.com',
+        },
+        {
+          id: 2,
+          name: 'exampleUser2',
+          time: 'user2@example.com',
+        },
+      ],
+      rumble_1989: [
+        {
+          id: 1,
+          name: 'exampleUser1',
+          time: 'user1@example.com',
+        },
+        {
+          id: 2,
+          name: 'exampleUser2',
+          time: 'user2@example.com',
+        },
+      ]
   };
 
   return (
@@ -29,3 +42,4 @@ const useLargeObject = () => {
 };
 
 // Wrap your app with LargeObjectProvider in index.js or App.js
+export { useLargeObject };
