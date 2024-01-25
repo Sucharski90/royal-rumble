@@ -1,8 +1,10 @@
-import React from 'react';
-import { useLargeObject } from './Entrants.jsx';
+// Entrant_List.jsx
 
-const UserList = () => {
-  const { users } = useLargeObject();
+import React from 'react';
+import { useLargeObject } from './Entrants'; // Adjust the path based on your actual structure
+
+const EntrantList = () => {
+  const { users, settings } = useLargeObject();
 
   return (
     <div>
@@ -14,8 +16,13 @@ const UserList = () => {
           </li>
         ))}
       </ul>
+
+      <h2>Settings</h2>
+      <p>Theme: {settings.theme}</p>
+      <p>Language: {settings.language}</p>
+      {/* Add more settings as needed */}
     </div>
   );
 };
 
-export {UserList} ;
+export default EntrantList;

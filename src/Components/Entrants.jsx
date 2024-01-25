@@ -1,35 +1,32 @@
+// /src/Components/Entrants.jsx
+
 import React, { createContext, useContext } from 'react';
 
 const LargeObjectContext = createContext();
 
 const LargeObjectProvider = ({ children }) => {
-  const largeObject = {
-    rumble_1988: [
-        {
-          id: 1,
-          name: 'exampleUser1',
-          time: 'user1@example.com',
+    const largeObject = {
+        users: [
+          {
+            id: 1,
+            username: 'john_doe',
+            email: 'john@example.com',
+          },
+          {
+            id: 2,
+            username: 'jane_smith',
+            email: 'jane@example.com',
+          },
+          // ... add more user objects as needed
+        ],
+        settings: {
+          theme: 'light',
+          language: 'en',
+          // ... other settings
         },
-        {
-          id: 2,
-          name: 'exampleUser2',
-          time: 'user2@example.com',
-        },
-      ],
-      rumble_1989: [
-        {
-          id: 1,
-          name: 'exampleUser1',
-          time: 'user1@example.com',
-        },
-        {
-          id: 2,
-          name: 'exampleUser2',
-          time: 'user2@example.com',
-        },
-      ]
-  };
-
+        // ... other data
+      };
+      
   return (
     <LargeObjectContext.Provider value={largeObject}>
       {children}
@@ -41,5 +38,4 @@ const useLargeObject = () => {
   return useContext(LargeObjectContext);
 };
 
-// Wrap your app with LargeObjectProvider in index.js or App.js
-export { useLargeObject };
+export { LargeObjectProvider, useLargeObject };
