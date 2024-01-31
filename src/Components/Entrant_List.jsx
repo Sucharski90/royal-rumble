@@ -17,10 +17,7 @@ const EntrantList = () => {
         ))}
       </ul>
 
-      <h2>Settings</h2>
-      <p>Theme: {settings.theme}</p>
-      <p>Language: {settings.language}</p>
-      {/* Add more settings as needed */}
+      
     </div>
   );
 };

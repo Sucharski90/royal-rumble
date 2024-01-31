@@ -18,12 +18,7 @@ const LargeObjectProvider = ({ children }) => {
             email: 'jane@example.com',
           },
           // ... add more user objects as needed
-        ],
-        settings: {
-          theme: 'light',
-          language: 'en',
-          // ... other settings
-        },
+        ]
         // ... other data
       };
       
