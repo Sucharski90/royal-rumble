@@ -4,7 +4,7 @@ import React from 'react';
 import { useLargeObject } from './Entrants'; // Adjust the path based on your actual structure
 
 const EntrantList = () => {
-  const { users, settings } = useLargeObject();
+  const { users } = useLargeObject();
 
   return (
     <div>
